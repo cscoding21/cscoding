@@ -14,6 +14,10 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+
+    - uses: webiny/action-conventional-commits@v1.3.0
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Optional, for private repositories.
     
     # Setup Go
     - name: Setup Go
